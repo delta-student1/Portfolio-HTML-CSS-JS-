@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      background-color: #f7f7f7;
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      margin-left: 300px;
+      background: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-left: 70px;
+    }
+
+    .content h1 {
+      font-size: 100px;
+      color: #333;
+      border: 1px solid black;
+      text-align: center;
+      width: 100%;
+      padding: 20px 0;
+    }
+
+    .vertical-menu {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(255, 215, 0, 0.8);
+      border-radius: 30px;
+      padding: 10px;
+    }
+
+    .vertical-menu a {
+      text-decoration: none;
+      margin: 10px 0;
+      font-size: 18px;
+      color: #333;
+      text-align: center;
+      padding: 10px;
+      background-color: rgb(3, 3, 3);
+      border-radius: 50%;
+      transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    }
+
+    .vertical-menu a:hover {
+      color: black;
+      background-color: white;
+      transform: scale(1.1);
+    }
+
+    .vertical-menu a:nth-child(4) {
+      color: white;
+      background-color: #333;
+    }
+
+    #current {
+      color: #f7f7f7;
+    }
+
+    .menu {
+      width: 300px;
+      height: 100%;
+      background-color: rgba(197, 168, 2, 0.8);
+      color: #000;
+      text-align: center;
+      position: fixed;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .menu img {
+      width: 100%;
+      height: fit-content;
+      margin-bottom: 20px;
+    }
+
+    .menu ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .menu a {
+      display: block;
+      padding: 10px 0;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    }
+
+    .menu a:hover {
+      transform: scale(1.1);
+      color: white;
+    }
+
+    .menu .select {
+      color: white;
+    }
+
+    .education {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+      width: 90%;
+    }
+
+    .education span {
+      width: 20%;
+      height: 2px;
+      background-color: rgb(168, 168, 4);
+      color: white;
+    }
+
+    .education .align {
+      display: flex;
+      border-bottom:0.5px solid #000;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="menu">
+    <img src="79619bc21341a59824f832efeae4f6f9.jpg" alt="Profile Photo">
+    <ul>
+      <li><i class="fa-solid fa-circle"></i></li>
+      <li>|</li>
+      <li><a href="index.html">HOME</a></li>
+      <li>|</li>
+      <li><a href="about.html">ABOUT ME</a></li>
+      <li>|</li>
+      <li class="select">RESUME</li>
+      <li>|</li>
+      <li><a href="#portfolio">PORTFOLIO</a></li>
+      <li>|</li>
+      <li><a href="#testimonials">TESTIMONIALS</a></li>
+      <li>|</li>
+      <li><a href="contact.html">CONTACT</a></li>
+      <li>|</li>
+      <li><i class="fa-solid fa-circle"></i></li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="content">
+      <h1>RESUME</h1>
+      <div class="education">
+        <h3>EDUCATION</h3>
+        <div class="align">
+          <div class="card">
+            <span>------------------</span>
+            <h4>SCHOOL</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis placeat voluptatibus accusamus aut
+              perferendis modi recusandae dolore ratione provident enim sapiente in, fugiat quasi? Ex exercitationem
+              laborum cupiditate repudiandae sequi?</p>
+          </div>
+          <div class="card">
+            <span>------------------</span>
+            <h4>COLLEGE</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit culpa facilis voluptatum velit quibusdam
+              rerum, possimus modi! Eligendi in eaque doloremque repudiandae ipsum officia eveniet, harum excepturi
+              voluptatibus saepe facilis!</p>
+          </div>
+          <div class="card">
+            <span>------------------</span>
+            <h4>UNIVERSITY</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis possimus molestiae iusto quis, ut
+              distinctio beatae debitis sit aspernatur voluptatum porro dolore. Nobis culpa quod doloremque ut,
+              architecto porro debitis!</p>
+          </div>
+        </div>
+      </div>
+      <div class="education">
+        <h3>EXPERIENCE</h3>
+        <div class="align">
+          <div class="card">
+            <span>------------------</span>
+            <h4>GAME DEVELOPMENT</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis placeat voluptatibus accusamus aut
+              perferendis modi recusandae dolore ratione provident enim sapiente in, fugiat quasi? Ex exercitationem
+              laborum cupiditate repudiandae sequi?</p>
+          </div>
+          <div class="card">
+            <span>------------------</span>
+            <h4>WEB DESIGN</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit culpa facilis voluptatum velit quibusdam
+              rerum, possimus modi! Eligendi in eaque doloremque repudiandae ipsum officia eveniet, harum excepturi
+              voluptatibus saepe facilis!</p>
+          </div>
+          <div class="card">
+            <span>------------------</span>
+            <h4>PHOTOGRAPHER</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis possimus molestiae iusto quis, ut
+              distinctio beatae debitis sit aspernatur voluptatum porro dolore. Nobis culpa quod doloremque ut,
+              architecto porro debitis!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="vertical-menu">
+        <a href="index.html"><i class="fas fa-home"></i></a>
+        <hr>
+        <a href="about.html"><i class="fas fa-user"></i></a>
+        <hr>
+        <a href="#"><i class="fas fa-briefcase" id="current"></i></a>
+        <hr>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+        <hr>
+        <a href="#"><i class="fa-solid fa-bullhorn"></i></a>
+        <hr>
+        <a href="contact.html"><i class="fas fa-phone"></i></a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            margin-left: 300px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-left: 70px;
+        }
+
+        .content h1 {
+            font-size: 100px;
+            color: #333;
+            border: 1px solid black;
+            text-align: center;
+            width: 100%;
+            padding: 20px 0;
+        }
+
+        .vertical-menu {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(255, 215, 0, 0.8);
+            border-radius: 30px;
+            padding: 10px;
+        }
+
+        .vertical-menu a {
+            text-decoration: none;
+            margin: 10px 0;
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+            padding: 10px;
+            background-color: rgb(3, 3, 3);
+            border-radius: 50%;
+            transition: transform 0.3s, background-color 0.3s, color 0.3s;
+        }
+
+        .vertical-menu a:hover {
+            color: black;
+            background-color: white;
+            transform: scale(1.1);
+        }
+
+        .vertical-menu a:nth-child(4) {
+            color: white;
+            background-color: #333;
+        }
+
+        #current {
+            color: #f7f7f7;
+        }
+
+        .menu {
+            width: 300px;
+            height: 100%;
+            background-color: rgba(197, 168, 2, 0.8);
+            color: #000;
+            text-align: center;
+            position: fixed;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .menu img {
+            width: 100%;
+            height: fit-content;
+            margin-bottom: 20px;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .menu a {
+            display: block;
+            padding: 10px 0;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            transition: transform 0.3s, background-color 0.3s, color 0.3s;
+        }
+
+        .menu a:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+
+        .menu .select {
+            color: white;
+        }
+
+        h3 {
+            font-size: xx-large;
+            color: #808080;
+        }
+
+        #unique {
+            color: #111111;
+        }
+
+        .alignment {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .alignment img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .formate {
+            margin-top: 50px;
+            display: flex;
+            justify-content: flex-start;
+            justify-content: space-around;
+        }
+
+        .container .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            margin-left: 30%;
+            justify-content: space-evenly;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        input,
+        textarea,
+        button {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #007BFF;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <img src="79619bc21341a59824f832efeae4f6f9.jpg" alt="Profile Photo">
+        <ul>
+            <li><i class="fa-solid fa-circle"></i></li>
+            <li>|</li>
+            <li><a href="index.html">HOME</a></li>
+            <li>|</li>
+            <li><a href="about.html">ABOUT ME</a></li>
+            <li>|</li>
+            <li><a href="resume.html">RESUME</a></li>
+            <li>|</li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li>|</li>
+            <li><a href="#testimonials">TESTIMONIALS</a></li>
+            <li>|</li>
+            <li class="select">CONTACT</li>
+            <li>|</li>
+            <li><i class="fa-solid fa-circle"></i></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h1>CONTACT</h1>
+            <h3>Feel <span id="unique">Free</span> To Contact Me!</h3>
+            <p style="color: #757373; font-weight: bold;">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                <br>Quis magni maiores voluptatibus neque
+                voluptates excepturi libero quibusdam voluptas tempore nihil accusamus quaerat, at fuga enim perferendis
+                error blanditiis ea cupiditate.</p>
+            <div class="formate">
+                <div class="alignment">
+                    <img src="image 5.png" alt="image of desktop">
+                    <p>You can contact me through this website by <br> the form in below for hiring me </p>
+                </div>
+                <div class="alignment">
+                    <img src="free-phone-icon-504-thumb.png" alt="image of phone" id="phone">
+                    <p>You can also contact me through my phone number:<br><br>Phone Number:<span
+                            style="color: rgb(61, 61, 206);">+145968216594 </span></p>
+                </div>
+            </div>
+            <h5 style="margin-left: 30%;">CONTACT US</h5>
+            <div class="form-container">
+                <form action="/submit" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Write your message here..."
+                        required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="vertical-menu">
+                <a href="index.html"><i class="fas fa-home"></i></a>
+                <hr>
+                <a href="about.html"><i class="fas fa-user"></i></a>
+                <hr>
+                <a href="resume.html"><i class="fas fa-briefcase"></i></a>
+                <hr>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+                <hr>
+                <a href="#"><i class="fa-solid fa-bullhorn"></i></a>
+                <hr>
+                <a href="#"><i class="fas fa-phone" id="current"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

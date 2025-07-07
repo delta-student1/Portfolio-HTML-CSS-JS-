@@ -1,0 +1,92 @@
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class FileManagerApp {
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(FileManagerApp::new);
+    }
+
+    public FileManagerApp() {
+        JFrame frame = new JFrame("File Manager App");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(600, 400);
+
+        // Create Tabs
+        JTabbedPane tabbedPane = new JTabbedPane();
+
+        // Authentication Tab
+        JPanel authPanel = new JPanel();
+        authPanel.setLayout(new GridLayout(3, 2, 10, 10));
+        JTextField emailField = new JTextField();
+        JPasswordField passwordField = new JPasswordField();
+        JButton loginButton = new JButton("Login");
+        authPanel.add(new JLabel("Email:"));
+        authPanel.add(emailField);
+        authPanel.add(new JLabel("Password:"));
+        authPanel.add(passwordField);
+        authPanel.add(loginButton);
+        tabbedPane.add("Authentication", authPanel);
+
+        // File Management Tab
+        JPanel filePanel = new JPanel();
+        filePanel.setLayout(new FlowLayout());
+        JButton uploadButton = new JButton("Upload File");
+        JButton downloadButton = new JButton("Download File");
+        JTextArea fileLog = new JTextArea(10, 40);
+        fileLog.setEditable(false);
+        filePanel.add(uploadButton);
+        filePanel.add(downloadButton);
+        filePanel.add(new JScrollPane(fileLog));
+        tabbedPane.add("File Management", filePanel);
+
+        // Sharing Tab
+        JPanel sharePanel = new JPanel();
+        sharePanel.setLayout(new FlowLayout());
+        JTextField fileToShare = new JTextField(20);
+        JButton shareButton = new JButton("Share File");
+        JLabel shareStatus = new JLabel();
+        sharePanel.add(new JLabel("File Name:"));
+        sharePanel.add(fileToShare);
+        sharePanel.add(shareButton);
+        sharePanel.add(shareStatus);
+        tabbedPane.add("Sharing", sharePanel);
+
+        // Event Listeners
+        loginButton.addActionListener(e -> {
+            String email = emailField.getText();
+            String password = new String(passwordField.getPassword());
+            if (!email.isEmpty() && !password.isEmpty()) {
+                JOptionPane.showMessageDialog(frame, "Login Successful!", "Info", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(frame, "Enter valid credentials!", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        });
+
+        uploadButton.addActionListener(e -> {
+            JFileChooser fileChooser = new JFileChooser();
+            int result = fileChooser.showOpenDialog(frame);
+            if (result == JFileChooser.APPROVE_OPTION) {
+                fileLog.append("Uploaded: " + fileChooser.getSelectedFile().getName() + "\n");
+            }
+        });
+
+        downloadButton.addActionListener(e -> {
+            fileLog.append("Download initiated...\n");
+        });
+
+        shareButton.addActionListener(e -> {
+            String fileName = fileToShare.getText();
+            if (!fileName.isEmpty()) {
+                shareStatus.setText("File " + fileName + " shared successfully!");
+            } else {
+                shareStatus.setText("Enter a file name to share.");
+            }
+        });
+
+        // Add Tabs to Frame
+        frame.add(tabbedPane);
+        frame.setVisible(true);
+    }
+}

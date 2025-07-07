@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      background-color: #f7f7f7;
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      margin-left: 300px;
+      background: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-left: 70px;
+    }
+
+    .content h1 {
+      font-size: 100px;
+      color: #333;
+      border: 1px solid black;
+      text-align: center;
+      width: 100%;
+      padding: 20px 0;
+    }
+
+    .main_para {
+      color: grey;
+      font-weight: bold;
+      font-size: x-large;
+      margin-left: 7px;
+    }
+
+    .para {
+      font-weight: bolder;
+      font-size: x-large;
+      color: black;
+    }
+
+    .content .description {
+      font-size: 16px;
+      color: grey;
+      line-height: 1.6;
+      margin-left: 7px;
+      margin-right: 15px;
+    }
+
+    .content .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #FFD700;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 25px;
+      width: 25%;
+    }
+
+    .vertical-menu {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(255, 215, 0, 0.8);
+      border-radius: 30px;
+      padding: 10px;
+    }
+
+    .vertical-menu a {
+      text-decoration: none;
+      margin: 10px 0;
+      font-size: 18px;
+      color: #333;
+      text-align: center;
+      padding: 10px;
+      background-color: rgb(3, 3, 3);
+      border-radius: 50%;
+      transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    }
+
+    .vertical-menu a:hover {
+      color: black;
+      background-color: white;
+      transform: scale(1.1);
+    }
+
+    .vertical-menu a:nth-child(4) {
+      color: white;
+      background-color: #333;
+    }
+
+    #current {
+      color: #f7f7f7;
+    }
+
+    .menu {
+      width: 300px;
+      height: 100%;
+      background-color: rgba(197, 168, 2, 0.8);
+      color: #000;
+      text-align: center;
+      position: fixed;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .menu img {
+      width: 100%;
+      height: fit-content;
+      margin-bottom: 20px;
+    }
+
+    .menu ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .menu a {
+      display: block;
+      padding: 10px 0;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    }
+
+    .menu a:hover {
+      transform: scale(1.1);
+      color: white;
+    }
+
+    .menu .select {
+      color: white;
+    }
+
+    .about_us_bottom {
+      display: flex;
+    }
+
+    .progress {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      background-color: #000;
+      padding: 20px;
+      margin: 20px 0;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .progress .item {
+      color: white;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .progress .item.right-border {
+      border-right: 2px solid rgb(63, 62, 59);
+    }
+
+    .progress .item.bottom-border {
+      border-bottom: 2px solid rgb(63, 62, 59);
+    }
+
+    .progress h2 {
+      color: rgb(189, 189, 4);
+      font-size: 36px;
+      margin: 0;
+    }
+
+    .progress p {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #f7f7f7;
+    }
+
+    .collect {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+    }
+
+    .collect h5 {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: x-large;
+      margin-left: 20px;
+      font-weight: bolder;
+    }
+
+    .sub_collect {
+      display: flex;
+      margin-right: 35px;
+    }
+
+    .sub_collect img {
+      height: 100px;
+      width: 100px;
+      margin-left: 20px;
+      padding: 10px;
+    }
+
+    .formate{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="menu">
+    <img src="79619bc21341a59824f832efeae4f6f9.jpg" alt="Profile Photo">
+    <ul>
+      <li><i class="fa-solid fa-circle"></i></li>
+      <li>|</li>
+      <li><a href="index.html">HOME</a></li>
+      <li>|</li>
+      <li class="select">ABOUT ME</li>
+      <li>|</li>
+      <li><a href="resume.html">RESUME</a></li>
+      <li>|</li>
+      <li><a href="#portfolio">PORTFOLIO</a></li>
+      <li>|</li>
+      <li><a href="#testimonials">TESTIMONIALS</a></li>
+      <li>|</li>
+      <li><a href="contact.html">CONTACT</a></li>
+      <li>|</li>
+      <li><i class="fa-solid fa-circle"></i></li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="content">
+      <h1>ABOUT ME</h1>
+      <p class="main_para">I'M <span class="para">Benjamin Smith,</span> Graphic Designer / Photographer</p>
+      <p class="description">
+        Ventor esters lorem fuga. Ex culper nantis coniquee aviste dui em borum sitta? Quis et eos autemque penser morbi
+        applicare connum volare mauris...Ventor esters lorem fuga. Ex culper nantis coniquee aviste dui em borum sitta?
+        Quis et eos autemque penser morbi applicare connum volare mauris...
+        Ventor esters lorem fuga. Ex culper nantis coniquee aviste dui em borum sitta? Quis et eos autemque penser morbi
+        applicare </p>
+      <div class="about_us_bottom">
+        <div class="progress">
+          <div class="item bottom-border right-border">
+            <h2>15+</h2>
+            <p>Years of Experience</p>
+          </div>
+          <div class="item bottom-border">
+            <h2>350+</h2>
+            <p>Projects Done</p>
+          </div>
+          <div class="item right-border">
+            <h2>200+</h2>
+            <p>Happy Clients</p>
+          </div>
+          <div class="item">
+            <h2>45k</h2>
+            <p>Followers</p>
+          </div>
+        </div>
+
+        <div class="collect">
+          <h5>What I do?</h5>
+          <div class="sub_collect">
+            <img src="image1.png" alt="image of pen">
+            <span class="formate">
+              <h4>Paint design</h4>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quae optio perspiciatis temporibus. In
+              nostrum illum repellendus dignissimos deleniti illo facilis quo quis quasi a! Obcaecati nihil esse fuga
+              pariatur?</p>
+            </span>
+          </div>
+          <div class="sub_collect">
+            <img src="image2.png" alt="image of pen">
+            <span class="formate">
+              <h4>Web design</h4>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quae optio perspiciatis temporibus. In
+              nostrum illum repellendus dignissimos deleniti illo facilis quo quis quasi a! Obcaecati nihil esse fuga
+              pariatur?</p>
+            </span>
+          </div>
+          <div class="sub_collect">
+            <img src="image3.png" alt="image of pen">
+            <span class="formate">
+              <h4>Photographer</h4>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quae optio perspiciatis temporibus. In
+              nostrum illum repellendus dignissimos deleniti illo facilis quo quis quasi a! Obcaecati nihil esse fuga
+              pariatur?</p>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="vertical-menu">
+        <a href="index.html"><i class="fas fa-home"></i></a>
+        <hr>
+        <a href="#"><i class="fas fa-user" id="current"></i></a>
+        <hr>
+        <a href="resume.html"><i class="fas fa-briefcase"></i></a>
+        <hr>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+        <hr>
+        <a href="#"><i class="fa-solid fa-bullhorn"></i></a>
+        <hr>
+        <a href="contact.html"><i class="fas fa-phone"></i></a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
